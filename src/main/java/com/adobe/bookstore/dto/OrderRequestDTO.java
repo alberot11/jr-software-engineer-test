@@ -29,6 +29,6 @@ public class OrderRequestDTO {
 	}
 	
 	public boolean isConsistent() {
-        return bookIds.size() == quantities.size();
-    }
+        	return bookIds.size() == quantities.size();
+    	}
 }
