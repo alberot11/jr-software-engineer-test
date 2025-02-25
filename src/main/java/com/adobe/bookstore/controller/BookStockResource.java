@@ -14,12 +14,8 @@ import com.adobe.bookstore.repository.BookStockRepository;
 @RequestMapping("/books_stock/")
 public class BookStockResource {
 
+	@Autowired
     private BookStockRepository bookStockRepository;
-
-    @Autowired
-    public BookStockResource(BookStockRepository bookStockRepository) {
-        this.bookStockRepository = bookStockRepository;
-    }
 
     @GetMapping("{bookId}")
     public ResponseEntity<BookStock> getStockById(@PathVariable String bookId) {
